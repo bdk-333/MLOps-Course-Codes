@@ -1,0 +1,46 @@
+[project]
+name = "good-coding-practices"
+version = "0.1.0"
+description = "Starter code for the SE 489 Good Coding Practices exercise"
+requires-python = ">=3.11"
+
+# ---------------------------------------------------------------------------
+# Ruff: linter + formatter (replaces flake8, isort, black for most setups)
+# Docs: https://docs.astral.sh/ruff/
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# Start small. Un-comment more rule groups as you get comfortable.
+# Full list: https://docs.astral.sh/ruff/rules/
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort (import ordering)
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade (suggests modern syntax)
+    "D",    # pydocstyle (PEP 257 docstrings)
+]
+ignore = [
+    "D203",   # conflicts with D211 — pick D211 (no blank line before class docstring)
+    "D213",   # conflicts with D212 — pick D212 (summary on first line)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+# ---------------------------------------------------------------------------
+# mypy: static type checker
+# Docs: https://mypy.readthedocs.io/
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+strict = true
+# Common beginner-friendly relaxations — remove as you level up:
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+pretty = true
