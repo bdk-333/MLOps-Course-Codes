@@ -1,7 +1,6 @@
 # Exercise: Good Coding Practices
 
 **Course:** SE 489 — MLOps (Week 3, Reproducibility in MLOps)
-**Notion exercise page:** <https://www.notion.so/1c7db01a0c94817faa48d2350897c9c9>
 
 This package contains starter code for three sub-exercises that go with the Good Coding Practices lesson:
 
@@ -42,6 +41,4 @@ mypy .
 2. Work through the files in the order above. Each one depends a little on the habits you built in the previous one.
 3. When you think you're done, run `ruff check . && ruff format --check . && mypy .` — all three should exit 0.
 
-## Where to find solutions
 
-Solutions live in `Exercises-Solutions/GoodCodingPractices/` **locally**, but that path is git-ignored so they won't appear on GitHub. Instructor walks through them in class.

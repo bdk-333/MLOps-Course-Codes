@@ -2,7 +2,7 @@
 
 Reference code, starter files, and exercise scaffolding for **SE 489: Machine Learning Operations (MLOps)** at DePaul University, taught by [Vahid Alizadeh](https://github.com/Alizadeh-DePaul).
 
-> Exercise instructions, lecture content, and class notes live in Notion. This repo holds the **code** — what you'll open in your editor, run locally, and commit back. If an exercise has a matching Notion page, its starter folder's README links to it.
+> Exercise instructions, lecture content, and class notes live in the course website. This repo holds the **code** — what you'll open in your editor, run locally, and commit back. 
 
 ---
 
@@ -13,6 +13,7 @@ MLOps-Course-Codes/
 ├── Exercises/                  ← starter code students work on (tracked)
 │   ├── GoodCodingPractices/        Week 3
 │   ├── Reproducibility/            Week 3
+│   ├── DataVersionControl/         Week 3
 │   ├── ApplicationLogging/         Week 4
 │   ├── GCP Artifact Registry/
 │   ├── Github Actions/
@@ -23,22 +24,21 @@ MLOps-Course-Codes/
 └── requirements.txt            ← baseline pinned deps for the exercises
 ```
 
-Each exercise folder under `Exercises/` is self-contained: a short README pointing back to its Notion page, a `pyproject.toml` (where applicable), and the Python source files students edit. Solutions for every exercise live under `Exercises-Solutions/` **locally**, but that path is git-ignored so they don't appear on GitHub.
+Each exercise folder under `Exercises/` is self-contained: a short README pointing back to its page, a `pyproject.toml` (where applicable), and the Python source files students edit. Solutions for every exercise live under `Exercises-Solutions/` **locally**, but that path is git-ignored so they don't appear on GitHub.
 
 ---
 
 ## Exercises at a glance
 
-| Week | Topic | Folder | Notion |
-| :---: | --- | --- | --- |
-| 3 | Good Coding Practices | [`Exercises/GoodCodingPractices/`](Exercises/GoodCodingPractices/) | [exercise](https://www.notion.so/1c7db01a0c94817faa48d2350897c9c9) · [class notes](https://www.notion.so/344db01a0c9481ed9f9ac23d13a15f05) |
-| 3 | Reproducibility | [`Exercises/Reproducibility/`](Exercises/Reproducibility/) | — |
-| 4 | Application Logging | [`Exercises/ApplicationLogging/`](Exercises/ApplicationLogging/) | — |
-| — | GCP Artifact Registry | [`Exercises/GCP Artifact Registry/`](Exercises/GCP%20Artifact%20Registry/) | — |
-| — | GitHub Actions | [`Exercises/Github Actions/`](Exercises/Github%20Actions/) | — |
-| — | MLflow | [`Exercises/MLflow/`](Exercises/MLflow/) | — |
-
-Additional weeks will be added throughout the quarter. If a row has an em-dash in the Notion column, the lecture page hasn't been linked here yet — ask in class or check the course site.
+| Week | Topic | Folder |
+| :---: | --- | --- |
+| 3 | Good Coding Practices | [`Exercises/GoodCodingPractices/`](Exercises/GoodCodingPractices/) |
+| 3 | Reproducibility | [`Exercises/Reproducibility/`](Exercises/Reproducibility/) |
+| 3 | Data Version Control | [`Exercises/DataVersionControl/`](Exercises/DataVersionControl/) |
+| 4 | Application Logging | [`Exercises/ApplicationLogging/`](Exercises/ApplicationLogging/) |
+| — | GCP Artifact Registry | [`Exercises/GCP Artifact Registry/`](Exercises/GCP%20Artifact%20Registry/) |
+| — | GitHub Actions | [`Exercises/Github Actions/`](Exercises/Github%20Actions/) |
+| — | MLflow | [`Exercises/MLflow/`](Exercises/MLflow/) |
 
 ---
 
