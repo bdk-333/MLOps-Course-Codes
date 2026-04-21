@@ -1,0 +1,12 @@
+# TODO: define the base configuration for the exercise.
+#
+# Minimum hyperparameters you'll need (all used by vae_mnist.py):
+#   dataset_path, cuda, batch_size, x_dim, hidden_dim, latent_dim, lr, epochs, seed
+#
+# You also need a `defaults:` list at the TOP that points to an experiment
+# config group under conf/experiment/ (singular — matches the folder name):
+#
+#   defaults:
+#     - experiment: exp1
+#
+# Then create conf/experiment/exp1.yaml and conf/experiment/exp2.yaml.

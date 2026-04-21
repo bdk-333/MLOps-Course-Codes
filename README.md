@@ -36,6 +36,7 @@ Each exercise folder under `Exercises/` is self-contained: a short README pointi
 | 3 | Reproducibility | [`Exercises/Reproducibility/`](Exercises/Reproducibility/) |
 | 3 | Data Version Control | [`Exercises/DataVersionControl/`](Exercises/DataVersionControl/) |
 | 4 | Application Logging | [`Exercises/ApplicationLogging/`](Exercises/ApplicationLogging/) |
+| 4 | Hydra (Configuration Management) | [`Exercises/Hydra/`](Exercises/Hydra/) |
 | — | GCP Artifact Registry | [`Exercises/GCP Artifact Registry/`](Exercises/GCP%20Artifact%20Registry/) |
 | — | GitHub Actions | [`Exercises/Github Actions/`](Exercises/Github%20Actions/) |
 | — | MLflow | [`Exercises/MLflow/`](Exercises/MLflow/) |
