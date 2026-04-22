@@ -20,24 +20,47 @@ starter scaffold you edit.
 
 ## Quick start
 
+This exercise uses **Python 3.11**. Pick the workflow that matches the tool you
+already have installed.
+
 ```bash
-# 1. Create an environment (Python 3.11 recommended)
-python -m venv .venv
+# Install uv once (if you don't have it):
+#   curl -LsSf https://astral.sh/uv/install.sh | sh            # macOS/Linux
+#   powershell -c "irm https://astral.sh/uv/install.ps1 | iex" # Windows
+
+# 1. Create an environment and install
+uv venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
+uv pip install -e .
 
-# 2. Install
-pip install -e .
-
-# 3. After you've done the refactor, try it:
+# 2. After you've done the refactor, try it:
 python vae_mnist.py                          # default run
 python vae_mnist.py epochs=5 lr=5e-4         # override via CLI
 python vae_mnist.py experiment=exp2          # swap experiment config
 
-# 4. Verify reproducibility (two runs with the same seed → identical weights)
+# 3. Verify reproducibility (two runs with the same seed → identical weights)
 python vae_mnist.py
 python vae_mnist.py
 python reproducibility_tester.py outputs/<run1>/ outputs/<run2>/
 ```
+
+### Alternative (plain pip)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install -e .
+```
+
+### End-to-end dry run
+
+```bash
+bash demo.sh
+```
+
+This runs a short default training, an override, an `experiment=exp2` swap,
+and the reproducibility check — useful as a smoke test once your refactor is
+done, and as a reference if you get stuck on the manual steps.
 
 ## Key conventions for this exercise
 

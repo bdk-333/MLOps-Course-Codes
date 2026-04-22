@@ -5,6 +5,8 @@ Exercises-Solutions/
 mlartifacts/
 mlruns/
 wandb/
+outputs/           # Hydra run-scoped output folders (per-exercise)
+multirun/          # Hydra --multirun output folders
 
 # --- Python / tooling --------------------------------------------------------
 __pycache__/

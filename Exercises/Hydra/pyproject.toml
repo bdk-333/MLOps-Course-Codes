@@ -2,7 +2,7 @@
 name = "mlops-hydra-exercise"
 version = "0.1.0"
 description = "Hydra configuration management for a PyTorch VAE on MNIST."
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "hydra-core==1.3.2",
     "omegaconf>=2.3,<2.4",
@@ -17,7 +17,7 @@ dev = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I"]
