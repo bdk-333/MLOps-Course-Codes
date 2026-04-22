@@ -3,10 +3,11 @@ name = "dvc-exercise"
 version = "0.1.0"
 description = "SE 489 — Data Version Control exercise. Tracks a small CSV with DVC + Google Drive."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 
-# Core deps for this exercise. Students install these with `pip install -e .`
-# or simply `pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"`.
+# Core deps for this exercise. Students install these with `uv pip install -e .`
+# or simply `uv pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"`.
+# (Plain-pip alternative: `pip install -e .` / `pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"`.)
 dependencies = [
     "dvc>=3.60,<4",
     "dvc-gdrive>=3.0.1",

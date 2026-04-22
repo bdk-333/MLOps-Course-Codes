@@ -6,7 +6,14 @@
 # run each command yourself so you understand what it does.
 #
 # Prereqs (see the exercise page for the detailed prerequisite section):
-#   1. DVC + dvc-gdrive installed:   pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"
+#   1. Install uv once:
+#        macOS/Linux:  curl -LsSf https://astral.sh/uv/install.sh | sh
+#        Windows:      powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+#      Then create a venv and install DVC + dvc-gdrive:
+#        uv venv && source .venv/bin/activate
+#        uv pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"
+#      (Plain-pip alternative: python -m venv .venv && source .venv/bin/activate
+#                              && pip install "dvc>=3.60" "dvc-gdrive>=3.0.1")
 #   2. Your OWN Google Cloud OAuth client created (Desktop app type), with
 #      the Drive API enabled. Export the client id/secret as env vars OR be
 #      ready to paste them when prompted:
@@ -17,7 +24,7 @@
 #        export GDRIVE_FOLDER_ID='your-folder-id'
 # =============================================================================
 
-set -e
+set -euo pipefail
 
 # --- Step 1: Init DVC ------------------------------------------------------
 # DVC reuses the surrounding git repo. Creates .dvc/ with config + cache.

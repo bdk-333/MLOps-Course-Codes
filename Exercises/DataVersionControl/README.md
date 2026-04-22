@@ -8,8 +8,8 @@ you'll use to practice versioning data with [DVC](https://dvc.org/) and a Google
 remote.
 
 > ⚠️ **Heads up: you must set up a custom Google OAuth client before `dvc push`.**
-> The default DVC app is blocked by Google ([issue #10516](https://github.com/iterative/dvc/issues/10516)).
-> The exercise walks you through creating your own `client_id` / `client_secret`
+> The default DVC app is blocked by Google ([issue #10516](https://github.com/treeverse/dvc/issues/10516)).
+> The exercise page walks you through creating your own `client_id` / `client_secret`
 > in Google Cloud Console — do that step FIRST, or your first `dvc push` will fail with
 > *"This app is blocked"*.
 
@@ -25,15 +25,28 @@ remote.
 ## Quick start
 
 ```bash
-# 1. Create and activate a virtual env (Python 3.11 recommended)
-python -m venv .venv
+# Install uv once:
+#   macOS/Linux:  curl -LsSf https://astral.sh/uv/install.sh | sh
+#   Windows:      powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# 1. Create and activate a virtual env (Python 3.11)
+uv venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 
 # 2. Install DVC + Google Drive extension
-pip install -U pip
-pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"
+uv pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"
 
 # 3. Verify install
+dvc --version
+```
+
+### Alternative (plain pip)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install -U pip
+pip install "dvc>=3.60" "dvc-gdrive>=3.0.1"
 dvc --version
 ```
 
@@ -52,5 +65,3 @@ need:
    automatically.
 2. **Commit the `.dvc` metafiles** (`data.dvc`, `.dvc/config`) so teammates can `dvc pull`.
 3. **Never commit `gdrive-user-credentials.json`** or your OAuth client secret to Git.
-
-
