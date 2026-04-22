@@ -1,0 +1,13 @@
+# Keep the build context small.
+
+.git/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+models/
+*.egg-info/
+.DS_Store

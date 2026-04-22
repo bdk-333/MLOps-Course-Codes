@@ -15,6 +15,8 @@ MLOps-Course-Codes/
 │   ├── Reproducibility/            Week 3
 │   ├── DataVersionControl/         Week 3
 │   ├── ApplicationLogging/         Week 4
+│   ├── Hydra/                      Week 4
+│   ├── Docker/                     Week 4
 │   ├── GCP Artifact Registry/
 │   ├── Github Actions/
 │   └── MLflow/
@@ -37,6 +39,7 @@ Each exercise folder under `Exercises/` is self-contained: a short README pointi
 | 3 | Data Version Control | [`Exercises/DataVersionControl/`](Exercises/DataVersionControl/) |
 | 4 | Application Logging | [`Exercises/ApplicationLogging/`](Exercises/ApplicationLogging/) |
 | 4 | Hydra (Configuration Management) | [`Exercises/Hydra/`](Exercises/Hydra/) |
+| 4 | Docker | [`Exercises/Docker/`](Exercises/Docker/) |
 | — | GCP Artifact Registry | [`Exercises/GCP Artifact Registry/`](Exercises/GCP%20Artifact%20Registry/) |
 | — | GitHub Actions | [`Exercises/Github Actions/`](Exercises/Github%20Actions/) |
 | — | MLflow | [`Exercises/MLflow/`](Exercises/MLflow/) |
