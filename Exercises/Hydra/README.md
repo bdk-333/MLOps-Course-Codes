@@ -54,13 +54,33 @@ pip install -e .
 
 ### End-to-end dry run
 
-```bash
-bash demo.sh
+Three equivalent runners are provided; pick whichever shell you prefer:
+
+```nu
+nu demo.nu           # cross-platform (Windows / macOS / Linux) - recommended
 ```
 
-This runs a short default training, an override, an `experiment=exp2` swap,
-and the reproducibility check — useful as a smoke test once your refactor is
-done, and as a reference if you get stuck on the manual steps.
+```bash
+bash demo.sh         # macOS / Linux / WSL / Git Bash
+```
+
+```powershell
+.\demo.ps1          # Windows PowerShell (no extra install needed)
+```
+
+Each runs a short default training, a second same-seed run + the
+reproducibility check, a CLI override, and an `experiment=exp2` swap -
+useful as a smoke test once your refactor is done, and as a reference
+if you get stuck on the manual steps.
+
+> **Nushell install** (one time): `winget install nushell` on Windows,
+> `brew install nushell` on macOS, or `cargo install nu` anywhere.
+> The `.nu` script is the preferred course-wide option because a single
+> file runs identically on every OS.
+
+> **PowerShell execution policy**: if Windows blocks `.\demo.ps1` the
+> first time, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+> once per terminal session.
 
 ## Key conventions for this exercise
 
