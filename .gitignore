@@ -1,6 +1,6 @@
 # --- Exercise solutions (instructor-only, kept locally, not pushed) ----------
 Exercises-Solutions/
-
+.backups/
 # --- ML experiment tracking artifacts ----------------------------------------
 mlartifacts/
 mlruns/
