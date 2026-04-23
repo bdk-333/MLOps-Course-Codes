@@ -79,3 +79,14 @@ done, and as a reference if you get stuck on the manual steps.
   from the folder that contains `conf/` (the exercise root).
 - Hydra writes each run's artifacts (config, log, your saved files) into a new
   timestamped folder under `outputs/`. Look there after each run.
+- **PyTorch 2.6+ and `torch.load`**: in PyTorch 2.6 the default flipped to
+  `weights_only=True`, which refuses to unpickle custom classes. Because
+  `vae_mnist.py` saves the **full `Model` object** (not a state_dict) with
+  `torch.save(model, ...)`, the pickle pulls in every nested class
+  (`Linear`, `Sequential`, your `Model`/`Encoder`/`Decoder`, ...) -
+  allow-listing all of them is brittle, so `reproducibility_tester.py`
+  loads with `weights_only=False`. That's appropriate here because the
+  checkpoints are produced by this same exercise seconds before being
+  loaded; **do not** copy that pattern when loading checkpoints from the
+  internet. A cleaner alternative for a real project: save `state_dict()`
+  instead of the full model.
